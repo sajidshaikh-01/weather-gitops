@@ -15,9 +15,10 @@ spec:
     spec:
       containers:
       - name: weather
-        image: 674182809289.dkr.ecr.us-east-1.amazonaws.com/weather-app:10
+        image: nginx:latest
         args:
           - "-text=Hello from Weather App running on EKS"
         ports:
           - containerPort: 5678
+
 
