@@ -15,8 +15,9 @@ spec:
     spec:
       containers:
       - name: weather
-        image: 674182809289.dkr.ecr.us-east-1.amazonaws.com/weather-app:11
+        image: 674182809289.dkr.ecr.us-east-1.amazonaws.com/weather-app:10
         args:
           - "-text=Hello from Weather App running on EKS"
         ports:
           - containerPort: 5678
+
