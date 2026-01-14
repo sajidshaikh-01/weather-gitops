@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: weather
-        image: hashicorp/http-echo
+        image: 674182809289.dkr.ecr.us-east-1.amazonaws.com/weather-app:latest
         args:
           - "-text=Hello from Weather App running on EKS"
         ports:
