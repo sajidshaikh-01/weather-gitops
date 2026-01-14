@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+  namespace: weather
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: weather
+  template:
+    metadata:
+      labels:
+        app: weather
+    spec:
+      containers:
+      - name: weather
+        image: hashicorp/http-echo
+        args:
+          - "-text=Hello from Weather App running on EKS"
+        ports:
+          - containerPort: 5678
